@@ -7,13 +7,13 @@ import TrackList from "./components/TrackList.tsx";
 import AudioControls from "./components/AudioPlayer/AudioControls.tsx";
 
 import jpg1 from "./assets/images/beat1.jpg";
-import jpg2 from "./assets/images/beat2.jpg";
-import jpg3 from "./assets/images/beat3.jpg";
-import jpg4 from "./assets/images/beat4.jpg";
+// import jpg2 from "./assets/images/beat2.jpg";
+// import jpg3 from "./assets/images/beat3.jpg";
+// import jpg4 from "./assets/images/beat4.jpg";
 
 function App() {
   const curTrack = useAppselector((state) => state.inputreduser.curentTrack);
-  const imagesarr = [jpg1, jpg2, jpg3, jpg4];
+  //   const imagesarr = [jpg1, jpg2, jpg3, jpg4];
 
   return (
     <>
@@ -21,7 +21,7 @@ function App() {
         <div className="playerBody">
           <div className="topSection">
             <div className="curentTrack">
-              <img src={imagesarr[curTrack]} alt="track" />
+              <img src={jpg1} alt="track" />
               <div className="curentTrack__content">
                 <TrackData
                   track={data[curTrack].track}
