@@ -1,9 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import Controls from "./Controls";
-// import aduoi1 from "../../assets/audio/beat1.mp3";
-// import aduoi2 from "../../assets/audio/beat2.mp3";
-// import aduoi3 from "../../assets/audio/beat3.mp3";
-// import aduoi4 from "../../assets/audio/beat4.mp3";
+
+import aduoi1 from "../../assets/audio/beat1.mp3";
+import aduoi2 from "../../assets/audio/beat2.mp3";
+import aduoi3 from "../../assets/audio/beat3.mp3";
+import aduoi4 from "../../assets/audio/beat4.mp3";
 
 import { data } from "../../assets/js/data";
 import { useAppDispatch, useAppselector } from "../../store/store";
@@ -11,15 +12,14 @@ import { setCurentTrack, setIsPlaying } from "../../store/TrackSlice";
 
 const AudioPlayer = () => {
   const [trackProgress, setTrackProgress] = useState(0);
+  const audiosS = [aduoi1, aduoi2, aduoi3, aduoi4];
 
   const disp = useAppDispatch();
   const { curentTrack, isPlaying, isRepiting, volume } = useAppselector(
     (state) => state.inputreduser
   );
 
-  const audioRef = useRef(
-    new Audio("/src/assets/audio/" + data[curentTrack].link)
-  );
+  const audioRef = useRef(new Audio(audiosS[curentTrack]));
   const intervalRef = useRef<number>();
   const isReady = useRef(false);
 
@@ -70,7 +70,7 @@ const AudioPlayer = () => {
   useEffect(() => {
     audioRef.current.pause();
 
-    audioRef.current = new Audio("/src/assets/audio/" + data[curentTrack].link);
+    audioRef.current = new Audio(audiosS[curentTrack]);
     setTrackProgress(audioRef.current.currentTime);
     audioRef.current.volume = +volume;
 
