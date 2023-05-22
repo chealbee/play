@@ -6,10 +6,10 @@ import { data } from "./assets/js/data.ts";
 import TrackList from "./components/TrackList.tsx";
 import AudioControls from "./components/AudioPlayer/AudioControls.tsx";
 
-import jpg1 from "../../assets/images/beat1.jpg";
-import jpg2 from "../../assets/images/beat2.jpg";
-import jpg3 from "../../assets/images/beat3.jpg";
-import jpg4 from "../../assets/images/beat4.jpg";
+import jpg1 from "./assets/images/beat1.jpg";
+import jpg2 from "./assets/images/beat2.jpg";
+import jpg3 from "./assets/images/beat3.jpg";
+import jpg4 from "./assets/images/beat4.jpg";
 
 function App() {
   const curTrack = useAppselector((state) => state.inputreduser.curentTrack);
