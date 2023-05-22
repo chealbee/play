@@ -2,6 +2,8 @@ import { FC } from "react";
 import { useAppDispatch, useAppselector } from "../../store/store";
 import { setIsPlaying } from "../../store/TrackSlice";
 
+import sprite from "../../assets/images/sprite.svg";
+
 const Controls: FC<IControls> = ({ onPrevClick, onNextClick }) => {
   const disp = useAppDispatch();
   const { isPlaying } = useAppselector((store) => store.inputreduser);
