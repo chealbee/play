@@ -1,0 +1,243 @@
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.playerBody {
+  background: #7d71da;
+  border-radius: 5px;
+  box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.35);
+  max-height: 600px;
+  max-width: 500px;
+  overflow: hidden;
+}
+.curentTrack {
+  display: flex;
+  align-items: center;
+
+  img {
+    margin-right: 20px;
+    width: 160px;
+    height: 160px;
+    flex: 0 0 160px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5%;
+  }
+
+  &__content {
+    color: white;
+    width: 100%;
+  }
+  &__data {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__athor {
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: 200;
+    max-width: 200px;
+    overflow: hidden;
+  }
+  &__name {
+    font-size: 35px;
+    font-weight: 200;
+    text-transform: uppercase;
+    max-width: 200px;
+    overflow: hidden;
+  }
+  &__year {
+    font-size: 14px;
+    font-weight: 400;
+  }
+}
+.player {
+  //  background: #dd2323;
+  display: flex;
+  flex-direction: column;
+  &__butons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    svg {
+      transition: all 0.3s ease 0s;
+      cursor: pointer;
+      height: 20px;
+      width: 20px;
+      fill: #96d683;
+      &:last-child {
+        transform: rotate(180deg);
+      }
+      &:nth-child(2) {
+        width: 30px;
+        height: 30px;
+      }
+      &:hover {
+        fill: #cbe6c3;
+      }
+    }
+  }
+}
+.timelIne {
+  &__line {
+    padding: 0 25px 0 20px;
+    margin-bottom: 10px;
+  }
+  &__range {
+    border-radius: 5px;
+    background: #96d683;
+    width: 100px;
+    height: 5px;
+  }
+
+  &__time {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 200;
+  }
+}
+
+.trackList {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  overflow-y: scroll;
+  height: 260px;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  & {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
+.tarck {
+  color: white;
+  transition: all 0.3s ease 0s;
+  background: rgba(0, 0, 0, 0.075);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  &__img {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    margin-right: 15px;
+    width: 50px;
+    height: 50px;
+    img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  &__author {
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 5px;
+  }
+  &__data {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    align-items: center;
+    width: 100%;
+  }
+  &__info {
+    width: 250px;
+    padding-right: 20px;
+  }
+  &__button {
+    svg {
+      height: 30px;
+      width: 30px;
+      fill: #96d683;
+      transition: all 0.3s ease 0s;
+      &:hover {
+        fill: #cbe6c3;
+      }
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+    scale: 1.02;
+    box-shadow: 0 4 7px rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.1);
+  }
+}
+
+input[type="range"] {
+  height: 5px;
+  -webkit-appearance: none;
+  cursor: pointer;
+  height: 5px;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+  border-radius: 5px;
+  width: 100%;
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    margin-top: -3.5px;
+    background-color: #242424;
+    border-radius: 50%;
+    height: 12px;
+    width: 12px;
+  }
+  &::-webkit-slider-runnable-track {
+    height: 5px;
+  }
+
+  &.setvolumeIcon {
+    width: 90px;
+  }
+}
+
+.player__audioControls {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  align-items: center;
+  svg {
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    fill: #96d683;
+    padding: 5px;
+    &:hover {
+      fill: #cbe6c3;
+    }
+    &.active {
+      fill: #181818;
+    }
+  }
+}
+
+.setClolumeBox {
+  padding: 10px;
+  background: #7d71da;
+  border-radius: 5px;
+  box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 25px;
+  right: 0;
+}
+.setClolumeParant {
+  position: relative;
+}
+.topSection {
+  background: hsla(0, 0%, 0%, 0.25);
+  padding: 20px;
+  padding-bottom: 10px;
+}
