@@ -3,10 +3,10 @@ import { IData } from "../assets/js/data";
 import { useAppDispatch, useAppselector } from "../store/store";
 import { setCurentTrack } from "../store/TrackSlice";
 
-import jpg1 from "../assets/images/beat1.jpg";
-import jpg2 from "../assets/images/beat2.jpg";
-import jpg3 from "../assets/images/beat3.jpg";
-import jpg4 from "../assets/images/beat4.jpg";
+// import jpg1 from "../assets/images/beat1.jpg";
+// import jpg2 from "../assets/images/beat2.jpg";
+// import jpg3 from "../assets/images/beat3.jpg";
+// import jpg4 from "../assets/images/beat4.jpg";
 import sprite from "../assets/images/sprite.svg";
 
 const SimpleTrack: FC<IData> = (props) => {
@@ -33,11 +33,11 @@ const SimpleTrack: FC<IData> = (props) => {
         <div className="tarck__button">
           {curentTrack === props.id && isPlaying ? (
             <svg>
-              <use href={"/src/assets/images/" + "sprite.svg#pause"}></use>
+              <use href={sprite + "#pause"}></use>
             </svg>
           ) : (
             <svg>
-              <use href={"/src/assets/images/" + "sprite.svg#play"}></use>
+              <use href={sprite + "#play"}></use>
             </svg>
           )}
         </div>

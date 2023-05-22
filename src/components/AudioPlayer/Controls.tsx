@@ -11,21 +11,21 @@ const Controls: FC<IControls> = ({ onPrevClick, onNextClick }) => {
     <>
       <div className="player__butons">
         <svg onClick={onPrevClick}>
-          <use href={"/src/assets/images/" + "sprite.svg#arrow"}></use>
+          <use href={sprite + "#arrow"}></use>
         </svg>
 
         {isPlaying ? (
           <svg onClick={() => disp(setIsPlaying(false))}>
-            <use href={"/src/assets/images/" + "sprite.svg#pause"}></use>
+            <use href={sprite + "#pause"}></use>
           </svg>
         ) : (
           <svg onClick={() => disp(setIsPlaying(true))}>
-            <use href={"/src/assets/images/" + "sprite.svg#play"}></use>
+            <use href={sprite + "#play"}></use>
           </svg>
         )}
 
         <svg onClick={onNextClick}>
-          <use href={"/src/assets/images/" + "sprite.svg#arrow"}></use>
+          <use href={sprite + "#arrow"}></use>
         </svg>
       </div>
     </>

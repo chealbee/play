@@ -23,7 +23,7 @@ const AudioControls = () => {
         }}
         className={isRepiting ? "active" : ""}
       >
-        <use href={"/src/assets/images/" + "sprite.svg#repeat"}></use>
+        <use href={sprite + "#repeat"}></use>
       </svg>
 
       <div
@@ -36,7 +36,7 @@ const AudioControls = () => {
         }}
       >
         <svg>
-          <use href={"/src/assets/images/" + "sprite.svg#sound"}></use>
+          <use href={sprite + "#sound"}></use>
         </svg>
         {isVoleme ? (
           <div className="setClolumeBox">
