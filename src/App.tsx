@@ -5,7 +5,6 @@ import TrackData from "./components/TrackData.tsx";
 import { data } from "./assets/js/data.ts";
 import TrackList from "./components/TrackList.tsx";
 import AudioControls from "./components/AudioPlayer/AudioControls.tsx";
-import imagelink from "./assets/images/beat1.jpg";
 
 function App() {
   const curTrack = useAppselector((state) => state.inputreduser.curentTrack);
@@ -18,7 +17,7 @@ function App() {
             <div className="curentTrack">
               <img
                 src={
-                  imagelink.slice(0, -9) +
+                  "/src/assets/images/" +
                   data[curTrack].link.split(".")[0] +
                   ".jpg"
                 }

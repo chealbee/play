@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from "react";
 import Controls from "./Controls";
-import audiolink from "../../assets/audio/beat1.mp3";
 
 import { data } from "../../assets/js/data";
 import { useAppDispatch, useAppselector } from "../../store/store";
@@ -15,7 +14,7 @@ const AudioPlayer = () => {
   );
 
   const audioRef = useRef(
-    new Audio(audiolink.slice(0, -9) + data[curentTrack].link)
+    new Audio("/src/assets/audio/" + data[curentTrack].link)
   );
   const intervalRef = useRef<number>();
   const isReady = useRef(false);
@@ -67,9 +66,7 @@ const AudioPlayer = () => {
   useEffect(() => {
     audioRef.current.pause();
 
-    audioRef.current = new Audio(
-      audiolink.slice(0, -9) + data[curentTrack].link
-    );
+    audioRef.current = new Audio("/src/assets/audio/" + data[curentTrack].link);
     setTrackProgress(audioRef.current.currentTime);
     audioRef.current.volume = +volume;
 

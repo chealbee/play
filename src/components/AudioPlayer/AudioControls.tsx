@@ -1,7 +1,6 @@
 import { setIsRepiting, setIsVolume } from "../../store/TrackSlice";
 import { useAppDispatch, useAppselector } from "../../store/store";
 import { useState } from "react";
-import imagelink from "../../assets/images/beat1.jpg";
 
 const AudioControls = () => {
   const { isRepiting, volume } = useAppselector((store) => store.inputreduser);
@@ -22,7 +21,7 @@ const AudioControls = () => {
         }}
         className={isRepiting ? "active" : ""}
       >
-        <use href={imagelink.slice(0, -9) + "sprite.svg#repeat"}></use>
+        <use href={"/src/assets/images/" + "sprite.svg#repeat"}></use>
       </svg>
 
       <div
@@ -35,7 +34,7 @@ const AudioControls = () => {
         }}
       >
         <svg>
-          <use href={imagelink.slice(0, -9) + "sprite.svg#sound"}></use>
+          <use href={"/src/assets/images/" + "sprite.svg#sound"}></use>
         </svg>
         {isVoleme ? (
           <div className="setClolumeBox">
