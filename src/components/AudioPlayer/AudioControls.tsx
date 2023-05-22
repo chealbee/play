@@ -2,7 +2,7 @@ import { setIsRepiting, setIsVolume } from "../../store/TrackSlice";
 import { useAppDispatch, useAppselector } from "../../store/store";
 import { useState } from "react";
 
-import sprite from "../../assets/images/sprite.svg";
+import sprite from "../../../public/images/sprite.svg";
 
 const AudioControls = () => {
   const { isRepiting, volume } = useAppselector((store) => store.inputreduser);

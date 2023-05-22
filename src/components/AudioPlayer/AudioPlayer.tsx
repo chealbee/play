@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import Controls from "./Controls";
 
-import aduoi1 from "../../assets/audio/beat1.mp3";
-import aduoi2 from "../../assets/audio/beat2.mp3";
-import aduoi3 from "../../assets/audio/beat3.mp3";
-import aduoi4 from "../../assets/audio/beat4.mp3";
+import aduoi1 from "../../../public/audio/beat1.mp3";
+import aduoi2 from "../../../public/audio/beat2.mp3";
+import aduoi3 from "../../../public/audio/beat3.mp3";
+import aduoi4 from "../../../public/audio/beat4.mp3";
 
 import { data } from "../../assets/js/data";
 import { useAppDispatch, useAppselector } from "../../store/store";

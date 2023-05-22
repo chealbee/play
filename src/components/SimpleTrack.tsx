@@ -3,11 +3,11 @@ import { IData } from "../assets/js/data";
 import { useAppDispatch, useAppselector } from "../store/store";
 import { setCurentTrack } from "../store/TrackSlice";
 
-import jpg1 from "../assets/images/beat1.jpg";
-import jpg2 from "../assets/images/beat2.jpg";
-import jpg3 from "../assets/images/beat3.jpg";
-import jpg4 from "../assets/images/beat4.jpg";
-import sprite from "../assets/images/sprite.svg";
+import jpg1 from "../../public/images/beat1.jpg";
+import jpg2 from "../../public/images/beat2.jpg";
+import jpg3 from "../../public/images/beat3.jpg";
+import jpg4 from "../../public/images/beat4.jpg";
+import sprite from "../../public/images/sprite.svg";
 
 const SimpleTrack: FC<IData> = (props) => {
   const { genre, group, track, dur, id } = props;
